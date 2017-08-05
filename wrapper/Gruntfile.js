@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       mac: {
         files: [
           { src: ['../build/darwin/Electron.app'], dest: '../build/darwin/Onyx Finder.app' },
-          { src: ['../build/darwin/Onyx Finder.app/Contents/MacOS/Electron'], dest: '../build/darwin/Pi Finder.app/Contents/MacOS/Onyx Finder' }
+          { src: ['../build/darwin/Onyx Finder.app/Contents/MacOS/Electron'], dest: '../build/darwin/Onyx Finder.app/Contents/MacOS/Onyx Finder' }
         ]
       },
       linux: {
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
     copy: {
       mac: {
         files: [
-          { src: 'icons/onyx.icns', dest: '../build/darwin/Pi Finder.app/Contents/Resources/atom.icns' }
+          { src: 'icons/onyx.icns', dest: '../build/darwin/Onyx Finder.app/Contents/Resources/atom.icns' }
         ]
       },
       win: {
@@ -49,8 +49,8 @@ module.exports = function(grunt) {
     sed: {
       bundle: {
         pattern: '<string>Electron</string>',
-        replacement: '<string>Pi Finder</string>',
-        path: '../build/darwin/Pi Finder.app/Contents/Info.plist'
+        replacement: '<string>Onyx Finder</string>',
+        path: '../build/darwin/Onyx Finder.app/Contents/Info.plist'
       }
     },
     winresourcer: {
@@ -140,6 +140,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-symlink');
 
   grunt.registerTask('default', ['clean:all', 'build-electron-app', 'clean:symlink', 'symlink']);
-  grunt.registerTask('build', ['clean:all', 'build-electron-app', 'rename', 'copy', 'chmod', 'sed', 'winresourcer', 'compress']);
+  grunt.registerTask('build', ['clean:all', 'build-electron-app', 'rename', 'copy', 'chmod', 'sed', 'winresourcer']);
 
 };

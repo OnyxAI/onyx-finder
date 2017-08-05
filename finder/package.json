@@ -1,0 +1,22 @@
+{
+  "name": "onyx-finder",
+  "version": "1.0.0",
+  "description": "An electron based utility for finding Onyx on your local network",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Onyx/onyx-finder"
+  },
+  "author": "Cassim Khouani <ckhouani@live.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Onyx/onyx-finder/issues"
+  },
+  "homepage": "https://github.com/Onyx/onyx-finder",
+  "dependencies": {
+    "async": "^2.1.2",
+    "ip": "^1.1.4",
+    "ssh2": "^0.5.4",
+    "opn": "^5.1.0"
+  }
+}
